@@ -1,0 +1,44 @@
+# MultiPermissions Configuration
+
+# De standaard groep waar spelers aan worden toegevoegd als ze voor het eerst joinen
+default-group: "default"
+
+# Database instellingen
+storage:
+  # Type opslag: 'yaml' of 'mysql'
+  type: "yaml"
+
+  # YAML opslag instellingen
+  yaml:
+    users-file: "users.yml"
+    groups-file: "groups.yml"
+
+  # MySQL opslag instellingen (alleen gebruikt als type is 'mysql')
+  mysql:
+    host: "localhost"
+    port: 3306
+    database: "multipermissions"
+    username: "root"
+    password: "password"
+    table-prefix: "mp_"
+
+# Permissie instellingen
+permissions:
+  refresh-on-join: true
+  save-on-quit: true
+
+# Debug modus (voor meer uitgebreide logging)
+debug: false
+
+# Berichten
+messages:
+  prefix: "&6[MultiPermissions] &r"
+  no-permission: "&cJe hebt geen toestemming om dit te doen."
+  player-not-found: "&cSpeler niet gevonden: {player}"
+  group-not-found: "&cGroep niet gevonden: {group}"
+  user-added-to-group: "&aSpeler {player} is toegevoegd aan groep {group}."
+  user-removed-from-group: "&aSpeler {player} is verwijderd uit groep {group}."
+  permission-added: "&aPermissie {permission} is toegevoegd aan {target}."
+  permission-removed: "&aPermissie {permission} is verwijderd van {target}."
+  group-created: "&aGroep {group} is aangemaakt."
+  group-deleted: "&aGroep {group} is verwijderd."
